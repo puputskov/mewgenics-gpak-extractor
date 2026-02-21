@@ -29,7 +29,7 @@ jobs:
       shell: cmd
       run: |
         call "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\Build\vcvarsall.bat" x64
-        cl .\extract.c /Femew.exe
+        cl .\extract.c /Femew.exe /O2 /link /MT
       
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v4
