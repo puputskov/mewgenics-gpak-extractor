@@ -24,6 +24,9 @@ jobs:
     - name: Add MSBuild to PATH
       uses: microsoft/setup-msbuild@v1.0.2
 
+    - name: vcvarsall
+      run: C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\Build\vcvarsall.bat x64
+
     - name: Build
       working-directory: ${{env.GITHUB_WORKSPACE}}
       run: cl .\extract.c /Femew.exe
