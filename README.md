@@ -1,13 +1,16 @@
 # Mewgenics Data Extractor
 
-# How to build
-```batch
-cl extract.c /Femew.exe
-```
 
 # Usage
 ```batch
 mew.exe "%MEWGENICS%\resources.gpak"
+```
+
+![Usage](./docs/usage.gif)
+
+# How to build
+```batch
+cl extract.c /Femew.exe
 ```
 
 ## .gpak File Format
