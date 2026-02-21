@@ -25,10 +25,12 @@ jobs:
       uses: microsoft/setup-msbuild@v1.0.2
       
     - name: vcvarsall
+      shell: cmd
       run: call "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\Build\vcvarsall.bat" x64
 
     - name: Build
       working-directory: ${{env.GITHUB_WORKSPACE}}
+      shell: cmd
       run: cl .\extract.c /Femew.exe
       
     - name: Upload a Build Artifact
