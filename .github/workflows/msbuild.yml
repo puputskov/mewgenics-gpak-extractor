@@ -34,9 +34,9 @@ jobs:
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v4
       with:
-        retention-days: 7
+        retention-days: 365
         # Artifact name
-        name: mew
+        name: mew.exe
         path: |
           mew.exe
         if-no-files-found: error
